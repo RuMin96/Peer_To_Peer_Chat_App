@@ -1,0 +1,40 @@
+﻿<Window x:Class="Peer_To_Peer_Chat_App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Peer_To_Peer_Chat_App"
+        mc:Ignorable="d"
+        Title="Peet_To_Peer Chat" 
+        FontFamily="Consolas" FontSize="20"
+        Height="280" MinHeight="280" MaxHeight="280"
+        Width="600" MinWidth="600" MaxWidth="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Local IP:" Margin="10" Grid.Row="0" Grid.Column="0"/>
+        <TextBox x:Name="localIpTextBox" Text="127.0.0.1" Margin="10" Grid.Row="0" Grid.Column="1"/>
+
+        <Label Content="Local Port:" Margin="10" Grid.Row="1" Grid.Column="0"/>
+        <TextBox x:Name="localPortTextBox" Text="1024" Margin="10" Grid.Row="1" Grid.Column="1"/>
+
+        <Label Content="Remote IP:" Margin="10" Grid.Row="2" Grid.Column="0" />
+        <TextBox x:Name="remoteIpTextBox" Text="127.0.0.1" Margin="10" Grid.Row="2" Grid.Column="1" />
+
+        <Label Content="Remote Port:" Margin="10" Grid.Row="3" Grid.Column="0" />
+        <TextBox x:Name="remotePortTextBox" Text="1025" Margin="10" Grid.Row="3" Grid.Column="1" />
+
+        <Button x:Name="waitConnectionButton" Content="Ожидание подключения" Margin="10" Grid.Row="4" Grid.Column="0" Click="waitConnectionButton_Click" />
+        <Button x:Name="connectionButton" Content="Подключение" Margin="10" Grid.Row="4" Grid.Column="1" Click="connectionButton_Click" />
+    </Grid>
+</Window>
